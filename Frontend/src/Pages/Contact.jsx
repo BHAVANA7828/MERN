@@ -1,8 +1,19 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Service from './Service';
 
-export const Contact = () => {
+const Contact = ({name}) => {
+  const [name1,setName]=useState("Bhavana");
+  const toggleName=()=>{
+    setName(name==="Bhavana"?"Bhavs":"Bhavana")
+  }
   return (
-    <div>Contact</div>
+    <div>
+      <h1>Name: {name1}</h1>
+      <button onClick={toggleName}>Toggle</button>
+      <Service name = {name}/>
+    </div>
+
+
   )
 }
 export default Contact

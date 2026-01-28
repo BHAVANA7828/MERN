@@ -12,10 +12,11 @@ import UseEffect from "./Hooks/UseEffect"
 import UseEffectApi from "./Hooks/UseEffectApi"
 import Signup from "./Auth/Signup"
 import UseRef from "./Hooks/UseRef"
-
+import UseReducer from "./Hooks/UseReducer"
 
 //import Counter from "./component/Counter"
 import {Route ,Routes} from "react-router-dom"
+import UseReducer from "./Hooks/UseReducer"
 const App = ()=>{
 const element = <h1>Hello</h1>
  return(
@@ -23,7 +24,7 @@ const element = <h1>Hello</h1>
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home name="Bhavana"/>}/>
-      <Route path='/about' element={<About name="Bhavana" age={19} dept="DS"/>}></Route>
+      <Route path='/about' element={<About name="Bhavana" age={20} dept="DS"/>}></Route>
       <Route path='/contact' element={<Contact/>}></Route>
       <Route path='/service' element={<Service/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
@@ -36,6 +37,7 @@ const element = <h1>Hello</h1>
         <Route path='useEffect' element={<UseEffect/>}></Route>
         <Route path='useEffectApi' element={<UseEffectApi/>}></Route>
         <Route path ='useRef' element={<UseRef/>}/>
+        <Route path ='useReducer' element={<UseReducer/>}/>
       </Route>  
 
     </Routes>
