@@ -12,6 +12,7 @@ import UseEffect from "./Hooks/UseEffect"
 import UseEffectApi from "./Hooks/UseEffectApi"
 import Signup from "./Auth/Signup"
 import UseRef from "./Hooks/UseRef"
+import Todo from "./component/Todo"
 
 
 
@@ -33,6 +34,7 @@ const element = <h1>Hello</h1>
       <Route path='/service' element={<Service/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/Signup' element={<Signup/>}></Route>
+      <Route path ='/todo' element ={<Todo/>}/>
 
       {/* Hooks */}
 
