@@ -15,9 +15,9 @@ const Signup = () => {
         e.preventDefault();
         console.log(userData);
     }
-  return (
+    return (
     <div>
-         <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <label>Name : </label>
             <input type="name" 
                 value={userData.name} 
@@ -40,9 +40,9 @@ const Signup = () => {
                 placeholder='Enter the Password'/>
             <br /><br />    
             <button type="submit">Login</button>
-         </form>
+        </form>
     </div>
-  )
+    )
 }
 
 export default Signup
