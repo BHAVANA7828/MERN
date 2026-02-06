@@ -45,12 +45,13 @@ exports.updateTodo=async (req,res)=>{
     try{
 //             res.json({message:"Todo not found"})
 // }
-//     todo.task=req.body.task || todo.task;
-//     todo.Completed = req.body.Completed===undefined?todo.Completed:req.body.Completed
-//     await todo.save();
-//     res.status(200).json(todo)
+    // todo.task=req.body.task || todo.task;
+    // todo.Completed = req.body.Completed===undefined?todo.Completed:req.body.Completed
+    // await todo.save();
+    // res.status(200).json(todo)
     //    const todo=await Todo.findByIdAndDelete(req.params.id,req.body,{new:true});
-    //    res.status(200).json(todo)  
+    const todo = await Todo.findByIdAndUpdate(req.params.id,req.body,{new:true});
+       res.status(200).json(todo)  
 } catch (err){
     res.status(500).send(err);
 }
@@ -67,7 +68,7 @@ exports.deleteTodo = async (req, res) => {
     // todo.completed= req.body.completed===undefined ? todo.completed : req.body.completed;
     // await todo.save();
     // res.status(200).json(todo);
-    const todo = await Todo.findByIdAndDelete(req.params.id,req.body,{new:true});
+    const todo = await Todo.findByIdAndDelete(req.params.id);
     res.status(200).json(todo);
     } catch (err) {
         res.status(500).send(err);
